@@ -55,10 +55,6 @@
 					<skip>false</skip>
 					<destFile>target/coverage-reports/jacoco-unit.exec</destFile>
 					<dataFile>target/coverage-reports/jacoco-unit.exec</dataFile>
-					<includes>
-						<!-- 目标测试目录 -->
-						<include>**/main/**</include>
-					</includes>
 					<rules>
 						<!-- 自定义规则 -->
 					</rules>
