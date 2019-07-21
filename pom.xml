@@ -18,6 +18,10 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<!-- versions below 3.0.0 do not work with java 9 -->
+        <commons.javadoc.version>3.0.0-M1</commons.javadoc.version>
+        <!-- coverall version 4.3.0 does not work with java 9, see https://github.com/trautonen/coveralls-maven-plugin/issues/112 -->
+        <coveralls.skip>true</coveralls.skip>
 	</properties>
 	
 	<dependencies>
@@ -34,6 +38,11 @@
 			<groupId>org.jacoco</groupId>
 			<artifactId>jacoco-maven-plugin</artifactId>
 			<version>0.8.3</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.2.3</version>
 		</dependency>
 	</dependencies>
 

@@ -1,7 +1,10 @@
 language: java
 sudo: true
 dist: trusty
-jdk: oraclejdk9
+jdk: 
+  - openjdk7
+  - oraclejdk8
+  - oraclejdk9
 addons:
   apt:
     packages:
@@ -11,5 +14,4 @@ before_install:
   
 after_success:
   - mvn clean test jacoco:report coveralls:report
-  ##- mvn clean test org.jacoco:jacoco-maven-plugin:prepare-agent install org.jacoco:jacoco-maven-plugin:report
-  ##- mvn org.eluder.coveralls:coveralls-maven-plugin:report -DrepoToken="${COVERALLS}"
+
